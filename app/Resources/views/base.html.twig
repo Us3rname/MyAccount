@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+        {% block body %}{% endblock %}
+        {% block javascripts %}{% endblock %}
+
+        {% block navigation %}
+            <nav>
+                <ul class="navigation">
+                    <li><a href="{{ path('MyAccountLoginBundle_login') }}">Login</a></li>
+                    <li><a href="{{ path('MyAccountLoginBundle_logout') }}">Logout</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        {% endblock %}
+    </body>
+</html>

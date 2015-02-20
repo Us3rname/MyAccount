@@ -1,0 +1,6 @@
+MyAccountLoginBundle_login:
+    path:     /login
+    defaults: { _controller: LoginBundle:Login:index }
+MyAccountLoginBundle_logout:
+    path:     /logout
+    defaults: { _controller: LoginBundle:Login:logout }
