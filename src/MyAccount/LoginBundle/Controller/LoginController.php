@@ -16,8 +16,19 @@ class LoginController extends Controller {
         return $this->render('LoginBundle:Login:index.html.twig');
     }
 
+    /**
+     * @Route("/login_check", name="_security_check")
+     */
+    public function securityCheckAction()
+    {
+        // The security layer will intercept this request
+    }
+
+    /**
+     * @Route("/logout", name="_logout")
+     */
     public function logoutAction()
     {
-        return $this->render('LoginBundle:Login:logout.html.twig');
+        // The security layer will intercept this request
     }
 }
